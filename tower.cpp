@@ -3,7 +3,7 @@
 using namespace std;
 
 void tower (int n_disks, char from, char to, char interim);
-
+int count = 0;
 int main () {
 	int n;
 	cout << "Number of disks: ";
@@ -12,6 +12,7 @@ int main () {
 }
 
 void tower (int n_disks, char from, char to, char interim) {
+	count = count + 1;
 	if (n_disks > 0) {
 		tower(n_disks - 1, from, interim, to);
 		cout << "Move disk " << n_disks << " from " << from << " to " << to << endl;
